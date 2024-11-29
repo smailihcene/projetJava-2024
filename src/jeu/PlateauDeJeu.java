@@ -89,6 +89,8 @@ public class PlateauDeJeu {
                 System.out.print(plateau[i][j] + " ");
             }
             System.out.println(); 
+                        System.out.println(); 
+
         }
     }
 }
