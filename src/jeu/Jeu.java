@@ -11,7 +11,7 @@ import java.util.List;
  * @author houda
  */
 public abstract class Jeu {
-    private Plateau plateau; 
+    private PlateauDeJeu plateau; 
     private List<Joueur> joueurs;
     //private Monstre monstre; 
     

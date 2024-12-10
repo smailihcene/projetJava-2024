@@ -60,18 +60,14 @@ public class Tuile extends Jeu{
     
     //méthode pour mélanger les tuiles dans la pile
     public static void melangerPile(){
-        if( pile != null){ //on vérifie si la pile n'est pas vide
-            Collections.shuffle(pile);  //permet de mélanger aléatoirement la pile 
+        if (pile != null) { // on vérifie si la pile n'est pas vide
+            do {
+                Collections.shuffle(pile); // Mélange aléatoire
+            } while (pile.get(0).estProie()); // on remélanger les tuiles si la première tuile est une proie ou deux proies
         }
+    
     }
-    // Ajoute une tuile à la pile
-    /*public void ajouterTuile(Tuile tuile) {
-        if(pile == null){  //donc si la pile de tuile est vide on ajoute des tuile
-            pile = new ArrayList<>(); //
-        }
-        pile.add(tuile);
-    }
-    */
+    
     
     //méthode pour piocher les tuiles 
     public static Tuile piocherTuile(){
@@ -99,6 +95,7 @@ public class Tuile extends Jeu{
 //        Tuile.pile.forEach(System.out::println);
 //    }
    
+    
    
    
 }
