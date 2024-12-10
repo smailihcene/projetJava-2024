@@ -4,12 +4,15 @@
  */
 package jeu;
 
+import java.util.List;
+
 /**
  *
- * @author cheim
+ * @author houda
  */
-public class Monstre {
-
-    private String monstre;
-    private int houda;
+public abstract class Jeu {
+    private Plateau plateau; 
+    private List<Joueur> joueurs;
+    //private Monstre monstre; 
+    
 }
