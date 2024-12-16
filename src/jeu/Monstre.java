@@ -41,6 +41,7 @@ public class Monstre {
         }
     }
 
+// fonction qui permet de chercher devant lui ou ses côtés les proies
     public List<Pion>trouverProiesVisible(List<Pion>, pions, Plateau plateau){
         List<Pion>proies=new ArrayList<>();
         int [][] directions={ 
@@ -72,6 +73,7 @@ public class Monstre {
         return proies;
     }
 
+//direction du tableau 
     private int getDirectionIndex() {
         switch (direction) {
             case "NORD": return h;
@@ -81,7 +83,7 @@ public class Monstre {
             default: throw new IllegalStateException("Direction invalide");
         }
     }
-
+//lorqu'il voit plusieurs proies, il cherche à faire un choix
     private Pion choisirProie(List<Pion> proies) {
         Pion cible = null;
         int distanceMin = Integer.MAX_VALUE;
@@ -97,6 +99,7 @@ public class Monstre {
         return cible;
     }
 
+//fonction pour qu'il se dirige vers la cible la plus près
     private void seDirigerVers(Pion cible, Plateau plateau) {
         if (cible.getX() > x) {
             direction = "EST";
@@ -108,9 +111,11 @@ public class Monstre {
             direction = "SUD";
             y++;
         } else if (cible.getY() < y) {
-            direction = "NORD";
+          direction = "NORD";
             y--;
         }
 
     }
+
+//dévorer
 }
